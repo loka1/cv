@@ -10,9 +10,10 @@ import Footer from '../components/Footer.astro';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	showFooter?: boolean | undefined;
 }
 
-const { title, description } = Astro.props;
+const { title, description,showFooter = true } = Astro.props;
 ---
 
 <html lang="en">
@@ -27,7 +28,8 @@ const { title, description } = Astro.props;
 		<div class="stack backgrounds">
 			<Nav />
 			<slot />
-			<Footer />
+
+			{(showFooter == 'true' || showFooter == true) ? <Footer /> : ""}
 		</div>
 
 		<script>
