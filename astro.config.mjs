@@ -1,9 +1,14 @@
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
+import prefetch from "@astrojs/prefetch";
 
+// https://astro.build/config
 export default defineConfig({
-    markdown: {
-        drafts: true,
-    }
+  markdown: {
+    drafts: true
+  },
+  integrations: [prefetch({
+    // Allow up to three links to be prefetched concurrently
+    throttle: 3,
+  })]
 });
