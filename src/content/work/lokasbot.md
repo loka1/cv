@@ -18,7 +18,7 @@ tags:
 *   lokasbot is written in Python using the pywikibot library.
 *   lokasbot is open source, and you can find its repository on [GitHub](https://github.com/LokasWiki/LokasBot).
 *   lokasbot is hosted on [Toolforge](https://wikitech.wikimedia.org/wiki/Portal:Toolforge), and you can access it on [tools.wmflabs.org](https://tools.wmflabs.org/lokasbot/).
-*   lokasbot is a member of [Arabic Wikipedia](https://ar.wikipedia.org/wiki/Special:CentralAuth/Lokasbot) and has a [bot flag](https://meta.wikimedia.org/wiki/Special:GlobalUsers/Lokasbot).
+*   lokasbot is a member of [Arabic Wikipedia](https://ar.wikipedia.org/wiki/Special:CentralAuth/LokasBot) and has a [bot flag](https://meta.wikimedia.org/wiki/Special:GlobalUsers/LokasBot).
 *   lokasbot has made more than 130k edits on Arabic Wikipedia.
 *   lokasbot performs over 10 tasks on Arabic Wikipedia, including:
     *   Statistics (50 pages)
