@@ -14,6 +14,8 @@ export default defineConfig({
             throttle: 3,
         }),
         NetlifyCMS({
+            disableIdentityWidgetInjection: true,
+            adminPath: "vRVzLsEZ3eDIrIaRBYcVF",
             config: {
                 backend: {
                     name: 'git-gateway',
@@ -23,15 +25,27 @@ export default defineConfig({
                 collections: [
                     // Content collections
                   {
-                    name: 'posts',
-                    label: 'Blog Posts',
-                    folder: 'src/pages/posts',
-                    create: true,
-                    delete: true,
-                    fields: [
-                      { name: 'title', widget: 'string', label: 'Post Title' },
-                      { name: 'body', widget: 'markdown', label: 'Post Body' },
-                    ],
+                      name: 'posts',
+                      label: 'Blog Posts',
+                      label_singular: 'Blog Post',
+                      folder: 'src/content/blog',
+                      create: true,
+                      delete: true,
+                      fields: [
+                          { name: 'title', widget: 'string', label: 'Post Title' },
+                          {
+                              name: 'publishDate',
+                              widget: 'datetime',
+                              format: 'DD MMM YYYY',
+                              date_format: 'DD MMM YYYY',
+                              time_format: false,
+                              label: 'Publish Date',
+                          },
+                          { name: 'author', widget: 'string', label: 'Author Name', required: false },
+                          { name: 'authorURL', widget: 'string', label: 'Author URL', required: false },
+                          { name: 'description', widget: 'string', label: 'Description', required: false },
+                          { name: 'body', widget: 'markdown', label: 'Post Body' }
+                          ],
                   },
                   {
                         name: 'projects',
