@@ -14,8 +14,6 @@ export default defineConfig({
             throttle: 3,
         }),
         NetlifyCMS({
-            disableIdentityWidgetInjection: true,
-            adminPath: "vRVzLsEZ3eDIrIaRBYcVF",
             config: {
                 backend: {
                     name: 'git-gateway',
